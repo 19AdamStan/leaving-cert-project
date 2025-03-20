@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR3 Recommendations page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <nav>
+      <a href="/">Info & Graphs</a>
+      <a href="/recommendations">Recommendations</a>
+      <a href="/suggestions">Suggestions</a>
+  </nav>
+
+    <h1>AR3 Recommendations page</h1>
+    
+    <h2>Statistics Summary</h2>
+
+    <!-- Create a table to present the data -->
+    <table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Mode</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Liga Goals</td>
+                <td>35.56</td>
+                <td>34.0</td>
+                <td>26.0</td>
+                <td>25.0</td>
+            </tr>
+            <tr>
+                <td>Liga Assists</td>
+                <td>13.06</td>
+                <td>12.5</td>
+                <td>11.0</td>
+                <td>16.0</td>
+            </tr>
+            <tr>
+                <td>CL Goals</td>
+                <td>10.44</td>
+                <td>10.0</td>
+                <td>6.0</td>
+                <td>11.0</td>
+            </tr>
+            <tr>
+                <td>CL Assists</td>
+                <td>3.39</td>
+                <td>3.5</td>
+                <td>4.0</td>
+                <td>9.0</td>
+            </tr>
+        </tbody>
+    </table>
+    <p> Based on these statistics we can see that the average goals + assists from each player in laliga equals to a whopping 48.6 per season, these are numbers we have never seen before further proving that these 2 are the best footballers ever.</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly Interactive Graphs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <nav>
+        <a href="/">Info & Graphs</a>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/suggestions">Suggestions</a>
+    </nav>
+
+<h1>Plotly Interactive Graphs</h1>
+<img src="{{ url_for('static', filename='shakinghands.jpg') }}" class="center-image" alt="A friendly handshake between two people"/>
+
+    
+
+  <p>I have researched Messi and Ronaldos statistics from the 2009-10 season up until 2017-18 season, here is what i found out:".</p>
+<ul>
+    <li>Messi's Best Liga Season: 50 goals in 2011-12. Basically, he was a human goal machine that year.</li>
+    <li>Ronaldo's Best Liga Season: 48 goals in 2014-15. Ronaldo wasn’t slacking either – nearly as many as Messi!</li>
+    <li>Messi’s Best CL Goals: 14 in 2011-12. Europe was his playground that season.</li>
+    <li>Ronaldo’s Best CL Goals: 17 in 2013-14. Cristiano was the top scorer in Europe that year.</li>
+    <li>Messi’s Most Assists: 21 in 2010-11. Not just scoring, but setting up goals like a true playmaker.</li>
+    <li>Ronaldo’s Most Assists: 16 in 2015-16. A multitasker – scoring and assisting like a pro.</li>
+</ul>
+
+
+
+
+    <div class="container">
+        <h1>Plotly Interactive Graphs</h1>
+        <div class="graph">{{ bar_chart | safe }}</div>
+        <div class="graph">{{ pie_chart | safe }}</div>
+        <div class="graph">{{ scatter_plot | safe }}</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi vs Ronaldo Stats</title>
+</head>
+<body>
+    <h1>Messi vs Ronaldo Stats</h1>
+    
+    <!-- Suggestions Form -->
+    <h2>Submit Your Suggestion</h2>
+    <form action="/submit_suggestion" method="POST">
+        <label for="player">Player:</label>
+        <select name="player" id="player">
+            <option value="Messi">Messi</option>
+            <option value="Ronaldo">Ronaldo</option>
+        </select><br><br>
+
+        <label for="rating">Rating (1-10):</label>
+        <input type="number" name="rating" id="rating" min="1" max="10"><br><br>
+
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Recent Suggestions</h3>
+    <div>
+        <!-- Render the suggestions here -->
+        {% for suggestion in suggestions %}
+            <div>
+                <strong>Player:</strong> {{ suggestion.player }} <br>
+                <strong>Rating:</strong> {{ suggestion.rating }} <br>
+                <strong>Comments:</strong> {{ suggestion.comments }} <br><br>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
